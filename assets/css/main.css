@@ -1658,6 +1658,9 @@ input, select, textarea {
 				margin: 0 auto;
 				width: auto;
 			}
+		.image.me {
+			border-radius: 50%;
+		}
 
 /* Button */
 
@@ -2417,7 +2420,7 @@ input, select, textarea {
 				}
 
 				#top p {
-					font-size: 1em;
+					font-size: 2em;
 				}
 
 			#contact footer {
@@ -2442,5 +2445,19 @@ input, select, textarea {
 					#copyright li:first-child {
 						margin-top: 0;
 					}
+				}
 
-	}
+code {
+	font-family: Consolas,"courier new";
+	color: crimson;
+	background-color: #f1f1f1;
+	padding: 2px;
+	font-size: 105%;
+  }
+
+  pre {
+	display: block;
+	font-family: monospace;
+	white-space: pre;
+	margin: 1em 0;
+  }
