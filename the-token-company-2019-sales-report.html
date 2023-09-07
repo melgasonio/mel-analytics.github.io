@@ -22,21 +22,29 @@
         <!-- Project 1 -->
 		<article id="project1" class="wrapper style2">
 			<header>
-				<h1><strong>2022 The Token Company: Sales Report</strong></h1>
+				<h1><strong>The Token Company 2019 Sales Report</strong></h1>
 			</header>
-			<div class="row">
+			<div class="container">
 				<div>
 					<div class="container">
 						<p><i>The boss of The Token Company, Mr. Kurbs, did not like the outcomes of the most recent marketing project of the team. He dared the analytics department to identify what really went wrong.</i></p>
-						<p>
 					</div>
 					<div class="container">
-						<p align="justify">
-							As a clever team of the analytics department, I decided to frame it on a better light. Instead of telling the boss what went wrong, my purpose is to tell him what we could do better, by using the data that we have. The analyses involve <strong>transforming the data</strong> using <strong><i>Power Query</i></strong> and <strong>visualizing</strong> it using <strong><i>Power BI itself</i></strong>. There are also other basic <strong><i>Statistics</i></strong> and <strong><i>Mathematics</i></strong> used.
-						</p>
+						<p align="justify">As a clever team of the analytics department, I decided to frame it on a better light. Instead of telling the boss what went wrong, my purpose is to tell him what we could do better, by using the data that we have. The analyses involve <strong>transforming the data</strong> using <strong><i>Power Query</i></strong> and <strong>visualizing</strong> it using <strong><i>Power BI</i></strong>. There are also other basic <strong><i>Statistics</i></strong> and <strong><i>Mathematics</i></strong> used.</p>
+					</div>
+					<div class="container">
+						<h3 align="left">Step 1: Identifying the business problems.</h3>
+					</div>
+					<div class="container">
+						<p align="justify">Before touching the data, let us first identify the key problems. Doing this will give us a sense of direction.</p>
+						<p><li align="left">What was the reason behind the failure of the marketing project?</li></p>
+						<p><li align="left">Now, let rephrase it. Perhaps, we should ask which of the opportunities were missed?</li></p>
+						<p><li align="left">Even better, let's narrow it down. Which states, products, months and quarters are we selling the most? </li></p>
+						<p><li align="left">After finding those out, we can investigate which time of the day we are getting the highest average revenue. With that, we can plan our advertisement schedules for our best-selling products, while also having precise location targets.</li></p>
+						<p align="justify">In the end, we need to see the following: <strong><i>Total Sales by States</i></strong>, <strong><i>Total Units Sold by States</i></strong>, <strong><i>Total Sales by Month</i></strong>, <strong><i>Total Sales by Quarter</i></strong>, <strong><i>Top 3 Best-Selling Products of the Year</i></strong> and <strong><i></i>Average Sales by Hour of the Day</i></strong></p>.			
 					</div>
 					<div class = "container">
-						<h3 align="left">Step 1: Extracting the data from MySQL Database.</h3>
+						<h3 align="left">Step 2: Extracting the data from MySQL Database.</h3>
 					</div>
 					<div class="container">
 						<p align="justify">The Token Company stores their data into a centralized database. We can get all the fields inside the sales table using the following SQL queries:</p>
@@ -45,11 +53,19 @@
 						<pre align="left"><code>USE tokenc_dB;</code></pre>
 						<pre align="left"><code>SELECT * FROM sales;</code></pre>
 					</div>
+					<div class="container">
+						<p align="justify">After the queries, we can now export the table as a csv file.</p>
+					</div>
 					<div class = "container">
-						<h3 align="left">Step 2: Transforming the data using Power Query.</h3>
+						<h3 align="left">Step 3: Transforming the data using Power Query.</h3>
 					</div>
 					<div class="container">
-						<p align="justify">The Token Company stores their data into a centralized database. We can get all the fields inside the sales table using the following SQL queries:</p>
+						<p align="justify">This is the top 5 rows from the raw data.</p>
+						<span class="image fit"><img src="images/proj1-top5.JPG" align="centralized"></span>
+						<p align="justify"><li align="left">Filter out the <i>null</i> values from the <i>Order ID</i> column.</li></p>
+						<p align="justify"><li align="left">Change the <i>Price Each</i> column <i>data type</i> from <i>whole number</i> to <i>currency</i>.</li></p>
+						<p align="justify"><li align="left">Split the <i>Order Date</i> column by the <i>whitespace or " "</i> delimiter.</li></p>
+						<p align="justify"><li align="left">Rename <i>Order Date.1</i> column and <i>Order Date.2</i> to <i>Order Date</i> and <i>Order Time</i>, respectively.</li></p>
 					</div>
 					<div class = "row aln-center">
 						<div>
