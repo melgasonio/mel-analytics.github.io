@@ -126,7 +126,7 @@ DROP COLUMN ProductType;
 					<div class="container">
 						<p align="justify">A table is said to be in the Third Normal Form when,
 						<li align="left">It satisfies the First Normal Form and the Second Normal form.</li>
-						<li align="left">And, it doesn't have Transitive Dependency.</li></p>
+						<li align="left">It doesn't have Transitive Dependency.</li></p>
 						<p align="justify">Observing the newly created tables, one of them violates 3NF rules. That table is products table. In this table, ProductCategory and ProductType depend only to ProductName, which dependes on ProductId. This is an example of transitive dependency. Tables still need to be broken down in such a way that new tables will be formed from products table, namely:
 						<li align="left">product_category : containing ProdCatId, Category</li>	
 						<li align="left">product_type : containing ProdTypeId, Type</li></p>
